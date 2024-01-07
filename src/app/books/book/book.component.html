@@ -1,0 +1,14 @@
+<li class="flex flex-col liFatherClass mr-4 text-center p-5">
+  <img width="150" [src]="eachDiffBook.src" />
+  <p class="title">
+    {{ eachDiffBook.name | titlecase }} by 
+  </p>
+  <p class="font-bold">
+    {{ eachDiffBook.author }}
+    </p>
+  <p class="currency">
+    {{ eachDiffBook.amount | currency : "USD" }}
+  </p>
+  <button *ngIf="!isInCart" (click)="addToCart()" >Add to Cart</button>
+  <button *ngIf="isInCart" (click)="removeFromCart()" >Remove From Cart</button>
+</li>

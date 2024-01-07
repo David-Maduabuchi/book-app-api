@@ -1,0 +1,7 @@
+<p class="p-books-header">Programming Books Section</p>
+<ul class="flex w-full flex-wrap">
+  <ng-container *ngFor="let eachDiffBook of booksArray">
+    <app-book  [eachDiffBook]="eachDiffBook" ></app-book>
+  </ng-container>
+ 
+</ul>
